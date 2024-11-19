@@ -53,3 +53,14 @@ if response.status_code == 200:
     print(response.json())  # Pretty print the JSON response
 else:
     print(f"Error: {response.status_code}, {response.text}")
+
+
+
+# Assuming 'response' is a Response object from requests
+response_data = response.json()  # Parse the JSON content from the response
+
+# Extract all webformatURL values as a list
+webformat_urls = [hit['webformatURL'] for hit in response_data.get('hits', [])]
+
+# Output the list
+print(webformat_urls)
