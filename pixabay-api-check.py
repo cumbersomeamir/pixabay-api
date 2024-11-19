@@ -64,3 +64,6 @@ webformat_urls = [hit['webformatURL'] for hit in response_data.get('hits', [])]
 
 # Output the list
 print(webformat_urls)
+
+
+#API does not work well on people, famous people, celebrities, only general and very simple prompts can work
